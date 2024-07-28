@@ -9,8 +9,11 @@ public class Main {
 
         Book book2 = new Book("War and Peace", author2, 1867);
 
-        System.out.println("Название книги - " + book1.getBookTitle() + ", автор - " + author1.getfirstName() + " " + author1.getlastName() + ", год выпуска - " + book1.getYearOfPublication());
+        System.out.println("Название книги - " + book1.getBookTitle() + ", автор - " + author1.getFirstName() + " " + author1.getLastName() + ", год выпуска - " + book1.getYearOfPublication());
 
-        System.out.println("Название книги - " + book2.getBookTitle() + ", автор - " + author2.getfirstName() + " " + author2.getlastName() + ", год выпуска - " + book2.getYearOfPublication());
+        System.out.println("Название книги - " + book2.getBookTitle() + ", автор - " + author2.getFirstName() + " " + author2.getLastName() + ", год выпуска - " + book2.getYearOfPublication());
+        book1.setYearOfPublication(1999);
+        System.out.println("Название книги - " + book1.getBookTitle() + ", автор - " + author1.getFirstName() + " " + author1.getLastName() + ", год выпуска - " + book1.getYearOfPublication());
+
     }
 }
