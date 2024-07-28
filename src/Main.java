@@ -2,14 +2,20 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Author author1 = new Author("John", "Tolkien");
+        Author author2 = new Author("Lev", "Tolstoy");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Book book1 = new Book("Lord of the rings", author1, 1954);
+
+        Book book2 = new Book("War and Peace", author2, 1867);
+
+        System.out.println("Название книги - " + book1.getBookTitle() + ", автор - " + author1.getFirstName() + " " + author1.getLastName() + ", год выпуска - " + book1.getYearOfPublication());
+
+        System.out.println("Название книги - " + book2.getBookTitle() + ", автор - " + author2.getFirstName() + " " + author2.getLastName() + ", год выпуска - " + book2.getYearOfPublication());
+        book1.setYearOfPublication(1999);
+        System.out.println("Название книги - " + book1.getBookTitle() + ", автор - " + author1.getFirstName() + " " + author1.getLastName() + ", год выпуска - " + book1.getYearOfPublication());
+        System.out.println(book1.toString());
+        System.out.println(author1.toString());
+
     }
 }
